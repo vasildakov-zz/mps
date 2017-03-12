@@ -29,9 +29,10 @@ The price and offer table is:
 You will need to include a scan and a checkout method. Scan accepts one item at a time in any order, so that if we scan a ‘biscuits’, a ‘bananas’, and another ‘biscuits’, we’ll recognise the two ‘biscuits’ items and price them at 45 (for a total price so far of 60). Checkout returns the basket total, taking into account any offers.
 
 Things we will be looking for are:
-● How you structure and layout your code, including good objected oriented design.
-● How easy your solution is for another developer to read and understand.
-● What methods you have used for testing.
+
+* How you structure and layout your code, including good objected oriented design.
+* How easy your solution is for another developer to read and understand.
+* What methods you have used for testing.
 
 ## Testing Data
 
