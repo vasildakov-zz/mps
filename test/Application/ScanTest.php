@@ -2,7 +2,7 @@
 
 namespace MpsTest\Application;
 
-use Mps\Domain\Cart\CartInterface;
+use Mps\Domain\Basket\BasketInterface;
 use Mps\Domain\Product\ProductInterface;
 use Mps\Domain\Product\Product;
 
@@ -16,13 +16,13 @@ use Mps\Application\ScanInterface;
  */
 class ScanTest extends \PHPUnit\Framework\TestCase
 {
-    protected $cart;
+    protected $basket;
 
     protected $product;
 
     protected function setUp()
     {
-        $this->cart = $this->getMockForAbstractClass(CartInterface::class);
+        $this->basket = $this->getMockForAbstractClass(BasketInterface::class);
 
         $this->product = $this->getMockBuilder(Product::class)->disableOriginalConstructor()->getMock();
     }
@@ -32,7 +32,7 @@ class ScanTest extends \PHPUnit\Framework\TestCase
      */
     public function itCanBeConstructed()
     {
-        $scan = new Scan($this->cart);
+        $scan = new Scan($this->basket);
 
         self::assertInstanceOf(ScanInterface::class, $scan);
     }
@@ -42,15 +42,7 @@ class ScanTest extends \PHPUnit\Framework\TestCase
      */
     public function itCanScanProducts()
     {
-        $array = [];
-
-        $this->product
-             ->expects(self::once())
-             ->method('toArray')
-             ->will(self::returnValue($array))
-        ;
-
-        $scan = new Scan($this->cart);
+        $scan = new Scan($this->basket);
 
         self::assertTrue($scan($this->product));
     }

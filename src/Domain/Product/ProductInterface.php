@@ -14,19 +14,19 @@ interface ProductInterface
      *
      * @return ProductId
      */
-    public function getId() : ProductId;
+    public function getId();
 
     /**
      * Returns product name
      *
      * @return ProductName
      */
-    public function getName() : ProductName;
+    public function getName();
 
     /**
      * Returns product price
      *
      * @return Money
      */
-    public function getPrice() : Money;
+    public function getPrice();
 }

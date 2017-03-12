@@ -2,8 +2,8 @@
 
 namespace Mps\Application;
 
-use Mps\Domain\Cart\CartItem;
-use Mps\Domain\Cart\CartInterface;
+use Mps\Domain\Basket\Basket;
+use Mps\Domain\Basket\BasketInterface;
 use Mps\Domain\Product\ProductInterface;
 
 /**
@@ -12,16 +12,16 @@ use Mps\Domain\Product\ProductInterface;
 class Scan implements ScanInterface
 {
     /**
-     * @var CartInterface
+     * @var BasketInterface
      */
-    private $cart;
+    private $basket;
 
     /**
-     * @param CartInterface $cart
+     * @param BasketInterface $basket
      */
-    public function __construct(CartInterface $cart)
+    public function __construct(BasketInterface $basket)
     {
-        $this->cart = $cart;
+        $this->basket = $basket;
     }
 
     /**
@@ -29,9 +29,7 @@ class Scan implements ScanInterface
      */
     public function __invoke(ProductInterface $product)
     {
-        $this->cart->add(
-            CartItem::fromProduct($product)
-        );
+        $this->basket->add($product);
 
         return true;
     }

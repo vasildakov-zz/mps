@@ -31,7 +31,7 @@ class Product implements ProductInterface
      * @param ProductName  $name
      * @param Money        $price
      */
-    public function __construct(ProductId $id, ProductName $name, Money $price)
+    public function __construct($id, $name, $price)
     {
         $this->setId($id);
         $this->setName($name);
@@ -41,7 +41,7 @@ class Product implements ProductInterface
     /**
      * @param ProductId $id
      */
-    private function setId(ProductId $id) : self
+    private function setId($id)
     {
         $this->id = $id;
 
@@ -51,7 +51,7 @@ class Product implements ProductInterface
     /**
      * @return ProductId
      */
-    public function getId() : ProductId
+    public function getId()
     {
         return $this->id;
     }
@@ -60,7 +60,7 @@ class Product implements ProductInterface
     /**
      * @param ProductName $name
      */
-    private function setName(ProductName $name) : self
+    private function setName($name)
     {
         $this->name = $name;
 
@@ -70,7 +70,7 @@ class Product implements ProductInterface
     /**
      * @return ProductName
      */
-    public function getName() : ProductName
+    public function getName()
     {
         return $this->name;
     }
@@ -78,7 +78,7 @@ class Product implements ProductInterface
     /**
      * @param Money $price
      */
-    private function setPrice(Money $price) : self
+    private function setPrice($price)
     {
         $this->price = $price;
 
@@ -88,7 +88,7 @@ class Product implements ProductInterface
     /**
      * @return Money
      */
-    public function getPrice() : Money
+    public function getPrice()
     {
         return $this->price;
     }
