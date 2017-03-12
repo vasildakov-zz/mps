@@ -35,7 +35,6 @@ class BasketItem implements ArrayAccess, BasketItemInterface
      */
     private $elements;
 
-
     /**
      * This is only for testing
      */
