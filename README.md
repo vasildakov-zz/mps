@@ -8,8 +8,7 @@ There is no requirement to access a database or use any other form of pe
 
 You have 60 minutes​ to complete the exercise. The main purpose of the assessment is to demonstrate your approach. As such credit will still be given as appropriate, even if all of the task has not been completed. Working code without full functionality is preferred over buggy code with an attempt at full functionality.
 
-Once finished please tar/zip your solution and email it to the person who originally sent you this
-document.
+Once finished please tar/zip your solution and email it to the person who originally sent you this document.
 
 ## Question
 The task is to implement a supermarket checkout class that calculates the total price for a number of items. Items are priced individually. In addition, some items have special offers allowing you to buy N of them for a specific cost X. For example, item strawberries might cost 50 individually, but this week we have a special offer: buy 3 strawberries and they’ll cost you
@@ -36,8 +35,7 @@ Things we will be looking for are:
 
 ## Testing Data
 
-Below is a table with each row representing a basket of items, with the correct total shown at the
-end. You can use these values to check your solution.
+Below is a table with each row representing a basket of items, with the correct total shown at the end. You can use these values to check your solution.
 
 | Strawberries  | Biscuits  | Bread     | Bananas   | Total     |
 |-------------- |---------- |-------    |---------  |-------    |
