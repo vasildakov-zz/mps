@@ -39,7 +39,7 @@ class OfferRepository
 
 
     /**
-     * @param  string $productId [description]
+     * @param  string $productId
      * @return null|Offer
      */
     public function findByProductId($productId)

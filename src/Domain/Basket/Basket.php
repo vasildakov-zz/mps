@@ -90,6 +90,11 @@ class Basket implements BasketInterface
         );
     }
 
+    public function clear()
+    {
+        $this->items = [];
+    }
+
     /**
      * @return array
      */

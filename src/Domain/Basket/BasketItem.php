@@ -36,7 +36,7 @@ class BasketItem implements ArrayAccess, BasketItemInterface
     private $elements;
 
     /**
-     * This is only for testing
+     * Quick and dirty, only for testing
      */
     private $offers = [
         [
@@ -62,19 +62,25 @@ class BasketItem implements ArrayAccess, BasketItemInterface
         $this->elements = $elements;
     }
 
-
+    /**
+     * @return string
+     */
     public function getId()
     {
         return $this->id;
     }
 
-
+    /**
+     * @return int
+     */
     public function getQuantity()
     {
         return count($this->elements);
     }
 
-
+    /**
+     * @return float
+     */
     public function getTotalPrice()
     {
         $offer = $this->getOffer();
@@ -95,17 +101,22 @@ class BasketItem implements ArrayAccess, BasketItemInterface
                 }
             }
         }
-
         return $this->total;
     }
 
 
-    public function add($element)
+    /**
+     * @param ProductInterface $product
+     */
+    public function add(ProductInterface $product)
     {
-        $this->elements[] = $element;
+        $this->elements[] = $product;
     }
 
 
+    /**
+     * Quick and dirty solution
+     */
     public function getOffer()
     {
         $key = array_search($this->id, array_column($this->offers, 'productId'));

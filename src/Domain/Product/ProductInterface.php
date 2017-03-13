@@ -5,7 +5,9 @@ namespace Mps\Domain\Product;
 use Mps\Domain\Money\Money;
 
 /**
- * ProductInterface
+ * Interface ProductInterface
+ *
+ * @author  Vasil Dakov <vasildakov@gmail.com>
  */
 interface ProductInterface
 {

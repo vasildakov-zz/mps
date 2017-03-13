@@ -68,7 +68,7 @@ class BasketTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
-    public function itCanCalculateTotal1()
+    public function itCanCalculateTotalWithNoOffers()
     {
         $basket = new Basket(1);
 
@@ -80,65 +80,11 @@ class BasketTest extends \PHPUnit\Framework\TestCase
         self::assertEquals(115, $basket->total());
     }
 
-    /**
-     * @test
-     */
-    public function itCanCalculateTotal2()
-    {
-        $basket = new Basket(2);
-
-        // 2
-        $basket->add($this->strawberries);
-        $basket->add($this->strawberries);
-
-        // 1
-        $basket->add($this->biscuits);
-
-        // 3
-        $basket->add($this->bread);
-        $basket->add($this->bread);
-        $basket->add($this->bread);
-
-        // 4
-        $basket->add($this->bananas);
-        $basket->add($this->bananas);
-        $basket->add($this->bananas);
-        $basket->add($this->bananas);
-
-        self::assertEquals(250, $basket->total());
-    }
 
     /**
      * @test
      */
-    public function itCanCalculateTotal3()
-    {
-        $basket = new Basket(3);
-
-        // 3
-        $basket->add($this->strawberries);
-        $basket->add($this->strawberries);
-        $basket->add($this->strawberries);
-
-        // 2
-        $basket->add($this->biscuits);
-        $basket->add($this->biscuits);
-
-        // 2
-        $basket->add($this->bread);
-        $basket->add($this->bread);
-
-        // 2
-        $basket->add($this->bananas);
-        $basket->add($this->bananas);
-
-        self::assertEquals(245, $basket->total());
-    }
-
-    /**
-     * @test
-     */
-    public function itCanCalculateTotal4()
+    public function itCanCalculateTotalWithOffers()
     {
         $basket = new Basket(4);
 
